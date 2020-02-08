@@ -1,0 +1,83 @@
+{
+  "itemConfig": [
+    {
+      "showName": "HsMicToHeadPhone",
+      "action": "com.mmigroup.action.audioloop.AUDIOLOOPBACK",
+      "support": true,
+      "automatic": false,
+      "paramconfig": {
+        "volume_rate": 1.0,
+        "hasHeadPhone": true,
+        "audioConfig": [
+          "mmitest=on;loopline=hsmic_headphone"
+        ],
+        "markedWords":"hsmictoheadphone_speakernotify"
+      }
+    },
+    {
+      "showName": "MainMic",
+      "action": "com.mmigroup.action.audioloop.AUDIOLOOPBACK",
+      "support": true,
+      "automatic": false,
+      "paramconfig": {
+        "volume_rate": 0.5,
+        "loop_type": "saveFile",
+        "hasHeadPhone": false,
+        "music_file": "/data/vendor/fac_sources/FTM_AP/MainMic.wav",
+        "audioConfig": [
+          "mmitest=on;inputdevice=mainmic"
+        ],
+        "markedWords": "mainmictoFile"
+      }
+    },
+    {
+      "showName": "Receiver",
+      "action": "com.mmigroup.action.audioloop.AUDIOPLAYER",
+      "support": true,
+      "automatic": false,
+      "paramconfig": {
+        "adb_ata": "action.adb.ata.Receiver",
+        "volume_rate": 1.0,
+        "is_show_list": false,
+        "music_file": "/vendor/etc/mmigroup/rec.wav",
+        "audioConfig": [
+          "mmitest=on;outputdevice=receiver"
+        ]
+      }
+    },
+    {
+      "showName": "Speaker",
+      "action": "com.mmigroup.action.audioloop.AUDIOPLAYER",
+      "support": true,
+      "automatic": false,
+      "paramconfig": {
+        "adb_ata": "action.adb.ata.Speaker",
+        "volume_rate": 1.0,
+        "is_show_list": false,
+        "music_file": "/vendor/etc/mmigroup/spk.wav",
+        "audioConfig": [
+          "mmitest=on;outputdevice=speaker"
+        ]
+      }
+    },
+    {
+      "showName": "Vibrator",
+      "action": "com.mmigroup.action.VIBRATER",
+      "support": false,
+      "automatic": true,
+      "paramconfig": {
+        "adb_ata": "action.adb.ata.Vibrator",
+        "is_auto_vibrate": true,
+        "auto_duration_time": 10000,
+        "shortInterval": [
+          200,
+          200
+        ],
+        "longInterval": [
+          200,
+          1000
+        ]
+      }
+    }
+  ]
+}

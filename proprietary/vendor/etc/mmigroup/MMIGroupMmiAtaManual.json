@@ -1,0 +1,172 @@
+{
+   "itemConfig": [
+      {
+          "showName": "OTG",
+          "action": "com.mmigroup.action.OTG",
+          "support": true,
+          "automatic": true,
+          "support_background_test": true,
+          "background_Service": "com.factory.mmigroup.item.OTGService",
+          "support_autoTest_autopass": false
+      },
+    {
+      "showName": "MainSIMCard",
+      "action": "com.mmigroup.action.MAINSIMCARD",
+      "support": true,
+      "automatic": true,
+      "support_background_test": true,
+      "background_Service": "com.factory.mmigroup.item.MainSimCardService"
+    },
+    {
+      "showName": "SubSIMCard",
+      "action": "com.mmigroup.action.SUBSIMCARD",
+      "support": true,
+      "automatic": true,
+      "support_background_test": true,
+      "background_Service": "com.factory.mmigroup.item.SubSimCardService"
+    },
+    {
+      "showName": "SdCard",
+      "action": "com.mmigroup.action.SDCARD",
+      "support": true,
+      "automatic": true,
+      "support_background_test": true,
+      "background_Service": "com.factory.mmigroup.item.SDCardService"
+    },
+    {
+        "showName": "Wlan",
+        "action": "com.mmigroup.action.WLAN",
+        "support": true,
+        "automatic": true,
+        "support_background_test": true,
+        "background_Service": "com.factory.mmigroup.item.WlanService",
+        "support_autoTest_autopass": false
+    },
+    {
+        "showName": "Bluetooth",
+        "action": "com.mmigroup.action.BLUETOOTH",
+        "support": true,
+        "automatic": true,
+        "support_background_test": true,
+        "background_Service": "com.factory.mmigroup.item.BluetoothService"
+    },
+    {
+      "showName": "GPS",
+      "action": "com.mmigroup.action.GPS",
+      "support": true,
+      "automatic": false,
+      "paramconfig": {
+        "is_show_location": false
+      },
+      "support_background_test": true,
+      "background_Service": "com.factory.mmigroup.item.GPSService"
+    },
+    {
+      "showName": "KeyPad",
+      "action": "com.mmigroup.action.KEYEVENT",
+      "support": false,
+      "automatic": false,
+      "paramconfig": {
+        "keyCode": [
+          "VOLUME_UP",
+          "VOLUME_DOWN",
+          "POWER",
+          "GOOGLE"
+        ]
+      }
+    }, 
+    {
+      "showName": "Proximity_C",
+      "action": "com.mmigroup.action.PROXIMITY_XM",
+      "support": true,
+      "automatic": true,
+      "support_background_test": false,
+      "paramconfig": {
+        "do_calibration": {
+          "support": true,
+          "calibration_scheme": "mtk",
+          "support_4cm_cali": false,
+          "3_cm": {
+            "min": 0,
+            "max": 99999
+          },
+          "3_cm_offset": {
+            "min": 100,
+            "max": 99999
+          },
+          "noCover": {
+            "min": 50,
+            "max": 8000
+          },
+          "tpmodel_table": {
+            "samsung":{
+              "WHITE": 0.37,
+              "BLACK": 0.4
+            },
+            "default": {
+              "ALL": 0.4
+            }
+          }
+        }
+      },
+      "oldAct": [
+         "PROXIMITY_C_NOCOVER",
+         "PROXIMITY_C_COVER"
+       ]
+    },
+    {
+        "showName": "Proximity",
+        "action": "com.mmigroup.action.PROXIMITY",
+        "support": false,
+        "automatic": false,
+        "paramconfig": {
+            "distance_tolerance": 0.5,
+            "do_calibration": {
+                "support": false,
+                "noCover": {
+                    "min": 0,
+                    "max": 65536
+                }
+            },
+            "autoTest": {
+                "do_calibration": {
+                    "support": false
+                }
+            }
+        }
+    },   
+    {
+        "showName": "Optical",
+        "action": "com.mmigroup.action.OPTICAL",
+        "support": true,
+        "automatic": false,
+        "paramconfig": {
+            "lux_std": 297,
+            "lux_pet": 99,
+            "is_check_range": true
+        }
+    },
+    {
+        "showName": "Sar",
+        "action": "com.mmigroup.action.SARMANAGER",
+        "support": true,
+        "automatic": false,
+        "support_background_test": false,
+        "paramconfig": {
+            "is_only_test_chip":false,
+            "support_calibrate": false,
+            "support_test": true,
+            "timeout_delay": 10000,
+            "wifi": false,
+            "tel": true
+        }
+    },
+    {
+      "showName": "TouchPal",
+      "action": "com.mmigroup.action.TOUCHPAL",
+      "support": true,
+      "support_autoTest_autopass": false,
+      "automatic": false
+    }
+  ]
+}

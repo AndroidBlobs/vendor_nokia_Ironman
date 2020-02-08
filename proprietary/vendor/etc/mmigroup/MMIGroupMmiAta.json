@@ -1,0 +1,175 @@
+{
+  "itemConfig": [
+    {
+      "showName": "FM",
+      "action": "com.mmigroup.action.FM",
+      "support": true,
+      "automatic": false,
+      "support_autoTest_autopass": false,
+      "support_background_test": false,
+      "background_Service": "com.factory.mmigroup.audioitem.FMBackgroundService",
+      "paramconfig": {
+        "return_adb_broadcast_result": true,
+        "volume_rate": 0.9
+      }
+    },
+    {
+      "showName": "Backlight",
+      "action": "com.mmigroup.action.BACKLIGHT",
+      "support": true,
+      "automatic": false,
+      "paramconfig": {
+        "brightness": [
+          255,
+          1
+        ],
+        "return_adb_broadcast_result": true
+      }
+    },
+    {
+      "showName": "TpOpenShort",
+      "action": "com.mmigroup.action.TPOPENSHORT",
+      "support": true,
+      "automatic": true,
+      "paramconfig": {
+        "return_adb_broadcast_result": true
+      }
+    },
+    {
+      "showName": "Accelerometer_C",
+      "action": "com.mmigroup.action.ACCELEROMETER_C",
+      "support": true,
+      "automatic": true,
+      "paramconfig": {
+        "support_calibrate": true,
+        "support_axialresult": true,
+        "support_angle45": false,
+        "support_angleneg45": false,
+        "data_suffix_rate": 1000,
+        "gravity_45_degree_x": -4.9000,
+        "gravity_45_degree_y": 4.9000,
+        "gravity_45_degree_z": 6.9340,
+        "gravity_45_degree_tolerance": 0.71,
+        "gravity_axial_limit": 1.5,
+        "is_auto_calibrate": true,
+        "return_adb_broadcast_result": true
+      }
+    },
+    {
+      "showName": "Proximity",
+      "action": "com.mmigroup.action.PROXIMITY",
+      "support": true,
+      "automatic": true,
+      "paramconfig": {
+        "distance_tolerance": 0.5,
+        "do_calibration":{
+          "support":false,
+          "calibration_scheme":"mtk"
+        }
+      }
+    },
+    {
+      "showName": "Proximity_C",
+      "action": "com.mmigroup.action.PROXIMITY_XM",
+      "support": true,
+      "automatic": true,
+      "support_background_test": false,
+      "paramconfig": {
+        "do_calibration": {
+          "support": true,
+          "calibration_scheme": "mtk",
+          "support_4cm_cali": false,
+          "3_cm": {
+            "min": 0,
+            "max": 99999
+          },
+          "3_cm_offset": {
+            "min": 100,
+            "max": 99999
+          },
+          "noCover": {
+            "min": 50,
+            "max": 5000
+          },
+          "tpmodel_table": {
+            "samsung":{
+              "WHITE": 0.37,
+              "BLACK": 0.4
+            },
+            "default": {
+              "ALL": 0.4
+            }
+          }
+        },
+        "return_adb_broadcast_result": true
+      },
+      "oldAct": [
+         "PROXIMITY_C_NOCOVER",
+         "PROXIMITY_C_COVER"
+       ]
+    },
+    {
+      "showName": "Optical",
+      "action": "com.mmigroup.action.OPTICAL",
+      "support": false,
+      "automatic": true,
+      "paramconfig": {
+        "lux_std": 297,
+        "lux_pet": 99,
+        "is_check_range": false
+      }
+    },
+    {
+      "showName": "Flashlight",
+      "action": "com.mmigroup.action.NODFLASHLIGHT",
+      "support": true,
+      "automatic": false,
+      "paramconfig": {
+        "cameraId": 0,
+        "is_flash": false,
+        "support_cool": true,
+        "support_warm": false,
+        "flashLightType": "back",
+        "return_adb_broadcast_result": true
+      }
+    },
+    {
+        "showName": "Sar",
+        "action": "com.mmigroup.action.SARMANAGER",
+        "support": true,
+        "automatic": false,
+        "support_background_test": false,
+        "paramconfig": {
+            "return_adb_broadcast_result": true,
+            "is_only_test_chip":false,
+            "support_calibrate": false,
+            "support_test": true,
+            "timeout_delay": 10000,
+            "wifi": false,
+            "tel": true
+        }
+    },
+    {
+      "showName": "MainSIMCard",
+      "action": "com.mmigroup.action.MAINSIMCARD",
+      "support": true,
+      "automatic": true,
+      "support_background_test": false,
+      "background_Service": "com.factory.mmigroup.item.DualSimCardService",
+      "paramconfig": {
+        "return_adb_broadcast_result": true
+      }
+    },
+    {
+      "showName": "DualSIMCard",
+      "action": "com.mmigroup.action.DualSim",
+      "support": true,
+      "automatic": true,
+      "support_background_test": false,
+      "background_Service": "com.factory.mmigroup.item.DualSimCardService",
+      "paramconfig": {
+        "return_adb_broadcast_result": true
+      }
+    }
+  ]
+}
